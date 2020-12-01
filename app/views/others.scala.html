@@ -1,0 +1,112 @@
+@()
+
+@main("Other Java Programs") {
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/others.css")">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="/home">Dessert & More</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="/add">Add</a></li>
+                <li><a href="/home#desserts_heading">View</a></li>
+                <li><a href="/others">Others</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="others">
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="vertical-menu" id="item-container">
+                <a class="items active" id="1" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(1)" class="active">1. Singleton Class</a>
+                <a class="items" id="2" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(2)">2.  Inheritance</a>
+                <a class="items" id="3"href="JavaScript:void(0);"  style="text-decoration: none" onclick="item_response(3)">3.  Enum</a>
+                <a class="items" id="4" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(4)">4.  Sets</a>
+                <a class="items" id="5" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(5)">5.  Linked Lists</a>
+                <a class="items" id="6" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(6)">6.  Abstract Class</a>
+                <a class="items" id="7" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(7)">7.  Static Methods, Variables</a>
+                <a class="items" id="8" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(8)">8.  Read From Disk File</a>
+                <a class="items" id="9" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(9)">9.  Buffer Reader & Writer</a>
+                <a class="items" id="10" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(10)">10. slf4j & log4j Loggers</a>
+                <a class="items" id="11" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(11)">11. Java Velocity</a>
+                <a class="items" id="12" href="JavaScript:void(0);" style="text-decoration: none" onclick="item_response(12)">12. Testing</a>
+            </div>
+        </div>
+        <div class="col-8" style="font-size: 20px;font-weight: bold;">
+            <div id="div1" class="active" style="margin-top:10px;">
+                Singleton Class
+            </div>
+            <div id="div2" style="margin-top:10px;" >
+                Inheritance
+            </div>
+            <div id="div3" style="margin-top:10px;">
+                Enum
+            </div>
+            <div id="div4" style="margin-top:10px;">
+                Sets
+            </div>
+            <div id="div5" style="margin-top:10px;">
+                Linked Lists
+            </div>
+            <div id="div6" style="margin-top:10px;">
+                Abstract Class
+            </div>
+            <div id="div7" style="margin-top:10px;">
+                Static Method and Varianles
+            </div>
+            <div id="div8" style="margin-top:10px;">
+                Read From Disk File
+            </div>
+            <div id="div9" style="margin-top:10px;">
+                Buffer Reader & Writer
+            </div>
+            <div id="div10" style="margin-top:10px;">
+                slf4j & log4j Loggers
+            </div>
+            <div id="div11" style="margin-top:10px;">
+                Java Velocity
+            </div>
+            <div id="div12" style="margin-top:10px;">
+                Testing
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="@routes.Assets.versioned("javascript/jquery-3.3.1.min.js")" type="text/javascript"></div>
+<script src="@routes.Assets.versioned("javascript/others.js")" type="text/javascript"></script>
+
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+
+    function item_response(item_no)
+    {
+        for( i=1; i<=12; i++)
+        {
+            $("#"+i).removeClass("active");
+            $("#div"+i).removeClass("active");
+        }
+        $("#"+item_no).addClass(" active");
+        $("#div"+item_no).addClass(" active");
+    }
+
+</script>
+
+
+}

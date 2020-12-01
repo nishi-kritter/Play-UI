@@ -1,0 +1,63 @@
+@()
+
+@main("Welcome to Dessert & More") {
+<nav class="nav">
+  <div class="container">
+    <div class="logo">
+      <a href="/home">Dessert & More</a>
+    </div>
+    <div id="mainListDiv" class="main_list">
+      <ul class="navlinks">
+        <li><a href="/add">Add</a></li>
+        <li><a href="#desserts_heading">View</a></li>
+        <li><a href="/others">Others</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="home">
+</section>
+<div style="height: 1000px">
+  <!-- just to make scrolling effect possible -->
+  <h2 class="myH2" id="desserts_heading">Desserts</h2>
+
+
+  <table id="desserts_table" style="border: 2px solid #481f01;font-size: 30px;font-weight:bolder;width:100%;margin-left:0px " cellpadding="2" cellspacing="2" align="center">
+    <thead>
+    <tr>
+      <th>Sr.No</th>
+      <th>Image</th>
+      <th>Item Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Modify</th>
+      <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+</div>
+
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.nav').addClass('affix');
+      console.log("OK");
+    } else {
+      $('.nav').removeClass('affix');
+    }
+  });
+</script>
+
+
+}
