@@ -11,7 +11,7 @@ import play.data.Form;
 
 public class HomeController extends Controller {
 
-     //static Form<Temp> tempForm = Form.form(Temp.class);
+    public static Form<Temp> tempForm = Form.form(Temp.class);
     public ArrayList  fetch_data() throws SQLException {
         ArrayList<Dessert> desserts = new ArrayList<Dessert>();
         ResultSet rs;
@@ -37,14 +37,44 @@ public class HomeController extends Controller {
 //    }
 
     public Result add_dessert() {
-
         System.out.println("Heyy");
         return ok("ok, I recived POST data. That's all...");
     }
 
+    public ArrayList get_categories() throws SQLException {
+        ArrayList<String> categories = new ArrayList<String>();
+        ResultSet rs;
+        Dessert d = new Dessert();
+        d.connection();
+        rs = d.get_Dessert_Categories();
+        int i=0;
+        while (rs.next())
+        {
+            i++;
+            categories.add(rs.getString(rs.getString("dessert_category_name")));
+        }
+        return  categories;
+    }
 
-    public Result add() {
+    public ArrayList get_flavours() throws SQLException {
+        ArrayList<String> flavours = new ArrayList<String>();
+        ResultSet rs;
+        Dessert d = new Dessert();
+        d.connection();
+        rs = d.get_Dessert_Flavours();
+        int i=0;
+        while (rs.next())
+        {
+            i++;
+            flavours.add(rs.getString(rs.getString("dessert_flavour_name")));
+        }
+        return  flavours;
+    }
 
+    public Result add() throws SQLException {
+//        ArrayList categories = get_categories();
+//        ArrayList flavours = get_flavours();
+        //return ok(views.html.add.render(categories,flavours));
         return ok(views.html.add.render());
     }
     public Result modify(int dessert_id) {
@@ -65,3 +95,4 @@ public class HomeController extends Controller {
     }
 
 }
+

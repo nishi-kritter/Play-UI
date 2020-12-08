@@ -1,3 +1,5 @@
+@import java.util
+@*(categories :  util.ArrayList[String], flavours :  util.ArrayList[String])*@
 @()
 
 @main("Add Dessert") {
@@ -24,7 +26,7 @@
     <div class="wrapper">
         <div class="inner">
 
-            <form action="#" method="POST" id="add_form">
+            <form action="/add_dessert" method="POST" id="add_form">
                 <h3>Add Dessert</h3>
                 <div class="form-wrapper form-price">
                     <label for="dessert_name">Dessert Name</label>
@@ -33,12 +35,22 @@
                 <div class="form-wrapper form-select">
                     <label for="category">Category</label>
                     <div class="form-holder">
-                        <select name="" id="category" name="category" class="form-control" style="width: auto">
+                        <select  id="category" name="category" class="form-control" style="width: auto">
                             <option value="0" class="option">--SELECT--</option>
                         </select>
                         <i class="zmdi zmdi-chevron-down"></i>
                     </div>
                 </div>
+                <div class="form-wrapper form-select">
+                    <label for="category">Flavour</label>
+                    <div class="form-holder">
+                        <select  id="flavour" name="flavour" class="form-control" style="width: auto">
+                            <option value="0" class="option">--SELECT--</option>
+                        </select>
+                        <i class="zmdi zmdi-chevron-down"></i>
+                    </div>
+                </div>
+
                 <div class="form-wrapper form-price">
                     <label for="price">Price</label>
                     &#x20B9; <input type="number" id="price" name="price" class="form-control" min="50.00" step="5.00" max="1500.00" />
@@ -53,7 +65,7 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <button>Add</button>
+                    <input type="submit" id="add_btn" value="Add">
                 </div>
             </form>
 

@@ -4,16 +4,24 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /home                           controllers.HomeController.index
+GET     /home                        controllers.HomeController.index
+
+# insert method
++ nocsrf
+POST     /add_dessert                     controllers.HomeController.add_dessert
 
 # add page
 GET     /add                           controllers.HomeController.add
 
 # modify page
-GET     /modify                           controllers.HomeController.modify
+#GET     /modify:dessert_id                           controllers.HomeController.modify(dessert_id : Int)
+
+# remove page
+GET     /remove/:dessert_id                           controllers.HomeController.remove(dessert_id)
 
 # others page
 GET     /others                           controllers.HomeController.others
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

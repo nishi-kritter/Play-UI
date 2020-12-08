@@ -8,5 +8,58 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.23-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/play-2.2.3" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/play-2.2.3/framework/skeletons/java-skel/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/skeletons/java-skel/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-cache/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-docs/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-exceptions/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-filters-helpers/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-java-ebean/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-java-jdbc/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-java-jpa/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-java/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-java/src/test/scala" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-json/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-test/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play-test/src/test/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play/src/test/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/play/src/test/scala" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/src/sbt-link/src/main/java" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/test/integrationtest-java/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/test/integrationtest-java/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/test/integrationtest/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/framework/test/integrationtest/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/comet-clock/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/computer-database-jpa/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/computer-database-jpa/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/computer-database/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/computer-database/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/eventsource-clock/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/forms/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/helloworld/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/websocket-chat/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/websocket-chat/test" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/java/zentasks/app" />
+          <root url="file://$USER_HOME$/play-2.2.3/samples/scala/comet-live-monitoring/app" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
